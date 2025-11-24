@@ -113,7 +113,7 @@ export function CasinoCard({ casino, rank }: CasinoCardProps) {
         }`}
       >
         {/* Desktop Layout */}
-        <div className="hidden md:grid md:grid-cols-[60px_1fr_auto_auto] md:gap-4 lg:gap-6 md:items-center pt-2">
+        <div className="hidden md:grid md:grid-cols-[60px_auto_auto_auto] md:gap-4 lg:gap-6 md:items-center pt-2">
           <div className="text-center flex-shrink-0">
             <div
               className={`text-3xl lg:text-4xl font-serif font-semibold ${isTop3 ? "text-[#c9962d]" : "text-gray-400"}`}
@@ -122,32 +122,33 @@ export function CasinoCard({ casino, rank }: CasinoCardProps) {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 lg:gap-6 min-w-0">
-            <div className="bg-gray-50 p-3 lg:p-4 rounded border border-gray-200 flex-shrink-0">
-              <Image
-                src={casino.logo || "/placeholder.svg"}
-                alt={casino.name}
-                width={140}
-                height={70}
-                className="w-28 lg:w-36 h-14 lg:h-18 object-contain"
-              />
-            </div>
-            <div className="flex flex-col items-center justify-center flex-shrink-0">
-              <div className="text-xs uppercase tracking-wider text-gray-500 mb-1">Bonus</div>
-              <div className="text-base lg:text-lg font-semibold text-gray-900 text-center leading-tight">
-                {casino.bonus}
-              </div>
+          <div className=" flex-shrink-0 items-center">
+            <Image
+              src={casino.logo || "/placeholder.svg"}
+              alt={casino.name}
+              width={180}
+              height={90}
+              className="object-contain"
+            />
+          </div>
+
+          <div className="flex flex-col items-center justify-center flex-shrink-0">
+            <div className="text-xs uppercase tracking-wider text-gray-500 mb-1">Bonus</div>
+            <div className="text-base lg:text-lg font-semibold text-gray-900 text-center leading-tight">
+              {casino.bonus}
             </div>
           </div>
 
-          <div className="text-center px-4 lg:px-6 flex-shrink-0">
-            {renderRating(casino.rating)}
-            <div className="flex items-center gap-1 justify-center mt-1">{renderStars("sm")}</div>
-            <div className="text-xs text-gray-500 mt-1">{casino.votes} glasova</div>
-          </div>
+          <div className="flex items-center gap-4 lg:gap-6 ml-auto">
+            <div className="text-center flex-shrink-0">
+              {renderRating(casino.rating)}
+              <div className="flex items-center gap-1 justify-center mt-1">{renderStars("sm")}</div>
+              <div className="text-xs text-gray-500 mt-1">{casino.votes} glasova</div>
+            </div>
 
-          <div className="flex-shrink-0">
-            <div className="btn-primary whitespace-nowrap text-sm lg:text-base px-4 lg:px-6">Posjeti</div>
+            <div className="flex-shrink-0">
+              <div className="btn-primary whitespace-nowrap text-sm lg:text-base px-4 lg:px-6">Posjeti</div>
+            </div>
           </div>
         </div>
 
@@ -158,14 +159,14 @@ export function CasinoCard({ casino, rank }: CasinoCardProps) {
               <Image
                 src={casino.logo || "/placeholder.svg"}
                 alt={casino.name}
-                width={160}
-                height={80}
-                className="w-28 h-24 object-contain"
+                width={120}
+                height={60}
+                className="w-28 h-14 object-contain"
               />
             </div>
-            <div className="flex flex-col items-center justify-center flex-1 min-w-0">
+            <div className="flex flex-col items-center justify-center flex-1">
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-1">Bonus</div>
-              <div className="text-lg font-semibold text-gray-900 text-center leading-tight">{casino.bonus}</div>
+              <div className="text-sm font-semibold text-gray-900 text-center leading-tight">{casino.bonus}</div>
             </div>
           </div>
 
