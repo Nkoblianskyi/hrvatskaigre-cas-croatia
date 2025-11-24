@@ -14,36 +14,27 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
           {/* Brand */}
           <div>
-                      <Link href="/" className="group transition-all duration-300" onClick={handleNavigation}>
-            <div className="flex items-center gap-3">
-              {/* Logo icon with golden gradient */}
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#c9962d] to-[#8b6914] flex items-center justify-center shadow-lg shadow-[#c9962d]/20">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-7 h-7 text-white"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 6v6l4 2" />
-                </svg>
+            <Link href="/" className="group transition-all duration-300" onClick={handleNavigation}>
+              <div className="flex items-center gap-3">
+                {/* Logo icon with golden gradient */}
+              
+                  <div className="flex items-center gap-3">
+                    {/* Logo icon with golden gradient */}
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#c9962d] to-[#8b6914] flex items-center justify-center shadow-lg shadow-[#c9962d]/20">
+                      <Image src="/logo.png" alt="Hrvatska Igre Logo" width={28} height={28} />
+                    </div>
+                    {/* Site name with luxury typography */}
+                    <div className="flex flex-col">
+                      <span className="font-serif text-xl font-bold tracking-tight text-white group-hover:text-[#c9962d] transition-colors">
+                        Hrvatska Igre
+                      </span>
+                      <span className="text-[10px] font-light tracking-[0.2em] text-[#c9962d] uppercase">
+                        Premium Casino Review
+                      </span>
+                    </div>
+                  </div>
               </div>
-
-              {/* Site name with luxury typography */}
-              <div className="flex flex-col">
-                <span className="font-serif text-3xl font-bold tracking-tight text-white group-hover:text-[#c9962d] transition-colors">
-                  Hrvatska Igre
-                </span>
-                <span className="text-xs font-light tracking-[0.2em] text-[#c9962d] uppercase">
-                  Premium Casino Review
-                </span>
-              </div>
-            </div>
-          </Link>
+            </Link>
             <p className="text-sm leading-relaxed mb-8">
               Vaš pouzdani partner za navigaciju kroz svijet online casino platformi u Hrvatskoj.
             </p>
@@ -99,7 +90,7 @@ export function Footer() {
 
         <div className="border-t border-white/5 pt-12">
           <h3 className="text-sm uppercase tracking-widest text-white mb-8 text-center">Odgovorno Kockanje</h3>
- <div className="grid grid-cols-2 md:flex md:flex-wrap gap-4 items-center justify-center mb-6">
+          <div className="grid grid-cols-2 md:flex md:flex-wrap gap-4 items-center justify-center mb-6">
             <a
               href="https://www.hupis.hr/klok"
               target="_blank"
@@ -114,7 +105,7 @@ export function Footer() {
                 className="h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
               />
             </a>
-                        <a
+            <a
               href="https://www.gambleaware.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -156,7 +147,7 @@ export function Footer() {
                 className="h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
               />
             </a>
-                        <a
+            <a
               href="https://www.pbsvi.hr/strucni-programi-i-klub/kocka-terapijsko-rehabilitacijski-program-za-ovisnost-o-kockanju/"
               target="_blank"
               rel="noopener noreferrer"

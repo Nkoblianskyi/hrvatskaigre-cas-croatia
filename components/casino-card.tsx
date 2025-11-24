@@ -106,75 +106,84 @@ export function CasinoCard({ casino, rank }: CasinoCardProps) {
         href={casino.url}
         target="_blank"
         rel="noopener noreferrer nofollow sponsored"
-        className={`block relative rounded-lg p-8 transition-all duration-300 hover:-translate-y-1 cursor-pointer ${
+        className={`block relative rounded-lg p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 cursor-pointer ${
           isTop3
             ? "bg-white border-2 border-[#c9962d] shadow-lg shadow-[#c9962d]/10 hover:shadow-xl hover:shadow-[#c9962d]/20"
             : "bg-white border border-gray-200 hover:border-[#c9962d]/50 shadow-md hover:shadow-lg"
         }`}
       >
-        <div className="hidden md:grid md:grid-cols-[auto_1fr_auto_auto] md:gap-8 md:items-center pt-2">
-          <div className="text-center">
-            <div className={`text-4xl font-serif font-semibold ${isTop3 ? "text-[#c9962d]" : "text-gray-400"}`}>
+        {/* Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-[60px_1fr_auto_auto] md:gap-4 lg:gap-6 md:items-center pt-2">
+          <div className="text-center flex-shrink-0">
+            <div
+              className={`text-3xl lg:text-4xl font-serif font-semibold ${isTop3 ? "text-[#c9962d]" : "text-gray-400"}`}
+            >
               {rank}
             </div>
           </div>
 
-          <div className="flex items-center gap-6">
-            <div className="bg-gray-50 p-4 rounded border border-gray-200">
+          <div className="flex items-center gap-4 lg:gap-6 min-w-0">
+            <div className="bg-gray-50 p-3 lg:p-4 rounded border border-gray-200 flex-shrink-0">
               <Image
                 src={casino.logo || "/placeholder.svg"}
                 alt={casino.name}
-                width={160}
-                height={80}
-                className="w-40 h-20 object-contain"
+                width={140}
+                height={70}
+                className="w-28 lg:w-36 h-14 lg:h-18 object-contain"
               />
             </div>
-            <div className="flex flex-col items-center justify-center">
-              <div className="text-xs uppercase tracking-wider text-gray-500 mb-2">Bonus</div>
-              <div className="text-xl font-semibold text-gray-900 text-center">{casino.bonus}</div>
+            <div className="flex flex-col items-center justify-center flex-shrink-0">
+              <div className="text-xs uppercase tracking-wider text-gray-500 mb-1">Bonus</div>
+              <div className="text-base lg:text-lg font-semibold text-gray-900 text-center leading-tight">
+                {casino.bonus}
+              </div>
             </div>
           </div>
 
-          <div className="text-center px-6">
+          <div className="text-center px-4 lg:px-6 flex-shrink-0">
             {renderRating(casino.rating)}
             <div className="flex items-center gap-1 justify-center mt-1">{renderStars("sm")}</div>
             <div className="text-xs text-gray-500 mt-1">{casino.votes} glasova</div>
           </div>
 
-          <div>
-            <div className="btn-primary whitespace-nowrap">Posjeti Casino</div>
+          <div className="flex-shrink-0">
+            <div className="btn-primary whitespace-nowrap text-sm lg:text-base px-4 lg:px-6">Posjeti</div>
           </div>
         </div>
 
-        <div className="md:hidden space-y-4">
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-3">
           <div className="flex items-center justify-between gap-4">
             <div className="bg-gray-50 p-3 rounded border border-gray-200 flex-shrink-0">
               <Image
                 src={casino.logo || "/placeholder.svg"}
                 alt={casino.name}
-                width={120}
-                height={60}
-                className="w-30 h-15 object-contain"
+                width={160}
+                height={80}
+                className="w-28 h-24 object-contain"
               />
             </div>
-            <div className="flex flex-col items-center justify-center flex-1">
+            <div className="flex flex-col items-center justify-center flex-1 min-w-0">
               <div className="text-xs uppercase tracking-wider text-gray-500 mb-1">Bonus</div>
-              <div className="text-lg font-semibold text-gray-900 text-center">{casino.bonus}</div>
+              <div className="text-lg font-semibold text-gray-900 text-center leading-tight">{casino.bonus}</div>
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              {renderRating(casino.rating)}
-              <div className="flex items-center gap-1">{renderStars("sm")}</div>
-              <div className="text-xs text-gray-500">{casino.votes}</div>
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 flex-1 min-w-0">
+              <div className="flex items-baseline gap-1">
+                <span className="text-lg font-serif font-semibold text-[#c9962d]">{casino.rating.toFixed(1)}</span>
+                <span className="text-xs text-gray-500">/10</span>
+              </div>
+              <div className="flex items-center gap-0.5">{renderStars("sm")}</div>
+              <div className="text-xs text-gray-500">({casino.votes})</div>
             </div>
-            <div className="btn-primary whitespace-nowrap">Posjeti Casino</div>
+            <div className="btn-primary text-[10px] px-2.5 py-1.5 flex-shrink-0 leading-tight">Posjeti</div>
           </div>
         </div>
 
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <p className="text-xs text-gray-600 leading-relaxed">{casino.terms}</p>
+        <div className="mt-4 pt-4 border-t border-gray-200">
+          <p className="text-xs text-gray-600 text-center truncate">18+ | Uvjeti vrijede | T&C</p>
         </div>
       </a>
     </div>
