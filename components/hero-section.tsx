@@ -30,7 +30,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative bg-[#06070a] text-white py-8 md:py-12 overflow-hidden">
+    <section className="relative bg-[#06070a] text-white py-4 md:py-8 overflow-hidden">
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -63,7 +63,6 @@ export function HeroSection() {
             <div className="flex flex-col items-center gap-2 p-4">
               <Image src="/flag.png" alt="shield" width={40} height={40} />
               <div className="text-sm font-medium text-white">Licencirano</div>
-              <div className="text-xs text-gray-500">Službeno</div>
             </div>
             <div className="flex flex-col items-center gap-2 p-4">
               <BadgeCheck className="w-4 h-4 text-[#c9962d]" />
