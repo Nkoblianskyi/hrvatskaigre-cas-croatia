@@ -51,13 +51,9 @@ export function CookieConsent() {
             <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
               {/* Icon & Content */}
               <div className="flex items-start gap-4 flex-1">
-                <div className="flex-shrink-0 bg-gradient-to-br from-[#daa520]/20 to-[#daa520]/5 rounded-xl p-3.5 border border-[#daa520]/40 shadow-lg shadow-[#daa520]/20">
-                  <Cookie className="h-7 w-7 text-[#daa520]" />
-                </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
                     Kolačići i Privatnost
-                    <Shield className="h-5 w-5 text-[#daa520]" />
                   </h3>
                   <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-3xl">
                     Koristimo kolačiće kako bismo vam pružili najbolje iskustvo i personalizirane sadržaje. Vaša
